@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Typography, AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@mui/material'
+import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
+import { makeStyles } from '@mui/styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <CssBaseline />
+     <AppBar position='relative'>
+     <Toolbar>
+     <PhotoCameraIcon />
+        <Typography variant='h6'>Photo Album</Typography>
+     </Toolbar>
+     </AppBar>
+     <main>
+       <div>
+         <Container maxWidth='sm'>
+           <Typography variant='h2' align='center' color='text.primary' gutterBottom >Photo Album</Typography>
+              <Typography variant='h5' align='center' color='text.secondary' paragraph >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur </Typography>
+              <div>
+                <Grid container spacing={2} justifyContent='center'>
+                  <Grid item>
+                      <Button variant='contained' color='primary'>See Photos</Button>
+                  </Grid>
+                  <Grid item>
+                      <Button variant='outlined' color='primary'>Secondary Action</Button>
+                  </Grid>
+                </Grid>
+              </div>
+         </Container>
+       </div>
+     </main>
+    </>
   );
 }
 
